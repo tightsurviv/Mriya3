@@ -1,0 +1,18 @@
+[package]
+name = "feed"
+version = "0.1.0"
+edition = "2021"
+description = "Data input: pool state and pre-execution transactions from a private-orderflow relayer."
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+pools = { path = "../pools" }
+engine = { path = "../engine" }
+sim = { path = "../sim" }
+send = { path = "../send" }
+keys = { path = "../keys" }
+serde_json = "1"
+base64 = "0.22"
+bs58 = "0.5"

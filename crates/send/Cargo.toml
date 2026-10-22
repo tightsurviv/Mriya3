@@ -1,0 +1,10 @@
+[package]
+name = "send"
+version = "0.1.0"
+edition = "2021"
+description = "Transaction building: ComputeBudget instructions, priority-fee model, tip policy (consensual auctions)."
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]

@@ -1,0 +1,11 @@
+[package]
+name = "mock-dex"
+version = "0.1.0"
+edition = "2021"
+description = "Mock DEX (SBF program) for CPI validation: swaps at a rate read from a vault account. Tests only."
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+solana-program = "2"

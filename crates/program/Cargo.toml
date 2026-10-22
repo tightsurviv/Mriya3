@@ -1,0 +1,18 @@
+[package]
+name = "arb-program"
+version = "0.1.0"
+edition = "2021"
+description = "On-chain program: executes an arbitrage route and reverts when there is no profit (revert-on-no-profit)."
+
+[lib]
+# crate-type cdylib is added for the SBF build (once the Solana toolchain is installed).
+path = "src/lib.rs"
+
+[dependencies]
+# solana-program/pinocchio are added when building the actual SBF program (Solana toolchain, operator).
+# The logic core (route parsing, profit threshold, CPI data encoding) has no dependencies
+# and is testable without the runtime.
+
+[dev-dependencies]
+# Host tests only: verifies Anchor discriminators via sha256.
+keys = { path = "../keys" }

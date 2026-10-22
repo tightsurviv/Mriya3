@@ -1,0 +1,15 @@
+[package]
+name = "tier3-client"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "tier3-client"
+path = "src/main.rs"
+
+[dependencies]
+solana-client = "2"
+solana-sdk = "2"
+# Our crates: the submit layer (sign + simulate) is tested on the same real tx.
+send = { path = "../crates/send" }
+feed = { path = "../crates/feed" }

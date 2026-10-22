@@ -1,0 +1,21 @@
+[package]
+name = "arb-cli"
+version = "0.1.0"
+edition = "2021"
+description = "Read-only demo: fetches pool accounts from RPC (via system curl), decodes and quotes them."
+
+[[bin]]
+name = "arb-cli"
+path = "src/main.rs"
+
+[dependencies]
+sim = { path = "../sim" }
+pools = { path = "../pools" }
+engine = { path = "../engine" }
+feed = { path = "../feed" }
+serde_json = "1"
+base64 = "0.22"
+bs58 = "0.5"
+# Transport: system `curl` (TLS from the system certificate store). Rust TLS stacks
+# (native-tls/rustls) need extra native tooling on some targets (dlltool or a C compiler). The production
+# bot will use a proper RPC/Geyser client; this read-only demo uses curl.

@@ -1,0 +1,12 @@
+[package]
+name = "engine"
+version = "0.1.0"
+edition = "2021"
+description = "Engine: pool registry, arbitrage opportunity detection (cyclic routes from the base) and sizing."
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+sim = { path = "../sim" }
+arb-program = { path = "../program" }

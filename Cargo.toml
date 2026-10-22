@@ -1,0 +1,12 @@
+[workspace]
+resolver = "2"
+members = ["crates/sim", "crates/pools", "crates/program", "crates/engine", "crates/feed", "crates/send", "crates/keys", "crates/cli"]
+# The SBF program is built separately with build-sbf.cmd (cargo-build-sbf), outside host tests.
+# tier3-client (solana-client/solana-sdk) is built separately, only for tier-3 validation on a local validator.
+exclude = ["crates/program-sbf", "crates/mock-dex", "tier3-client"]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"

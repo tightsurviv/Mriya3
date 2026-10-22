@@ -1,0 +1,10 @@
+[package]
+name = "sim"
+version = "0.1.0"
+edition = "2021"
+description = "AMM math for the arbitrage bot: swap quotes (constant product), route profit, optimal input size."
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]

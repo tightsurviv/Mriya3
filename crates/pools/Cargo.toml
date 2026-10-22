@@ -1,0 +1,11 @@
+[package]
+name = "pools"
+version = "0.1.0"
+edition = "2021"
+description = "Decodes pool account state (Pump AMM and others) into inputs for the `sim` simulator."
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+sim = { path = "../sim" }
